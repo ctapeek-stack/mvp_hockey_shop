@@ -9,7 +9,8 @@ CREATE TABLE customers (
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     phone VARCHAR(20),
-    registration_date TIMESTAMP  DEFAULT CURRENT_TIMESTAMP
+    registration_date TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
+    password_hash CHARACTER(60) 
 );
 
 CREATE TABLE products (
