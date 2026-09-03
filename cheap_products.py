@@ -27,7 +27,7 @@ cur.execute(sql, (limit,))
 
 rows = cur.fetchall()
 for row in rows:
-    print(row)
+    print(f"{row[0]} - {row[1]:.2f} руб. ({row[2]})")
 
 cur.close()
 conn.close()
