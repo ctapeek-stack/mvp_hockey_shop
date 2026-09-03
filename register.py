@@ -34,7 +34,7 @@ sql = """
 """
 try:
     cur.execute(sql, (first_name, last_name, email, password_hash))
-    row = cur.fetchone
+    row = cur.fetchone()
     conn.commit()
     print(f"Пользователь {email} зарегистрирован, id = {row[0]}")
 except psycopg.errors.UniqueViolation:
