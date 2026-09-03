@@ -1,19 +1,9 @@
-import os
-
+from db import get_connection
 import bcrypt
-import psycopg
-from dotenv import load_dotenv
 
-load_dotenv()
-
-conn = psycopg.connect(
-    host=os.environ["DB_HOST"],
-    port=os.environ["DB_PORT"],
-    dbname=os.environ["DB_NAME"],
-    user=os.environ["DB_USER"],
-    password=os.environ["DB_PASSWORD"],
-)
+conn = get_connection()
 cur = conn.cursor()
+
 
 first_name = input('Имя: ')
 last_name = input('Фамилия: ')
